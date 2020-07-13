@@ -5,7 +5,6 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="app26.views.CheckHttpMethod.as_view" />
-          <option value="app3.views.Employee.as_view" />
         </list>
       </option>
     </inspection_tool>

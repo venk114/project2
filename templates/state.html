@@ -1,0 +1,36 @@
+{% extends 'common.html' %}
+  {% block venkat %}
+      <style>
+        h1
+        {
+             font-size: 50px;
+             font-family: "Agency FB";
+        }
+      </style>
+      <h1>{{ sname }}</h1>
+      <h1>statecode------{{ data.statecode }}</h1>
+      <table align="center" border="2">
+          <tr>
+              <th>DIst Name</th>
+              <th>confrimed</th>
+               <th>active</th>
+               <th>recovered</th>
+          </tr>
+          {% for x,y in data.districtData.items %}
+          <tr>
+             <th>{{ x }}</th>
+              <th>{{ y.confirmed }}</th>
+               <th>{{ y.active }}</th>
+               <th>{{ y.recovered}}</th>
+          </tr>
+          {%  endfor %}
+
+          <tr>
+              <th>Total</th>
+              <th></th>
+              <th></th>
+              <th></th>
+          </tr>
+      </table>
+
+  {% endblock %}

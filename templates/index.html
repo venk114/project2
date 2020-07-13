@@ -1,0 +1,23 @@
+{% extends 'common.html' %}
+{% block venkat %}
+    <style>
+    #states
+      {
+          font-size: 50px;
+          font-family: "Agency FB";
+          color: green;
+          padding: 5px;
+      }
+    </style>
+    <table align="center" border="">
+        <tr><th id="states">States in india</th></tr>
+         {% for x in data %}
+            <tr><th>
+                <a href = "{% url 'open_state'%}?state_name={{ x }}">
+                 {{ x }}
+                </a>
+               </th>
+            </tr>
+         {% endfor %}
+    </table>
+{% endblock %}
